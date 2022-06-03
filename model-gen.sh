@@ -14,7 +14,7 @@ elif [[ $answer =~ "1.2" ]]; then
     datamodel-codegen  --input ./specification-1.4/schema/bom-1.2.schema.json --input-file-type jsonschema --output ./pydantic1_2
     sed -i s/unique_items=True/"'REMOVED LM unique_items=True'"/g ./pydantic1_2/__init__.py
 else
-    echo "That is not a current version."
+    echo "That is not a current version." 
 fi
 
 

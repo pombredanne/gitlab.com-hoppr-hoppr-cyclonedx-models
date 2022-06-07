@@ -1,11 +1,13 @@
 #!/bin/bash
 answer=$1
+cd=cyclonedx_dwnld.tar.gz
 
-HTTP_CODE=$(curl -s -w "%{http_code}\n" -o /dev/null https://github.com/CycloneDX/specification/releases/tag/$answer -vvv)
+HTTP_CODE=$(curl -s -w "%{http_code}\n" -o /dev/null https://github.com/CycloneDX/specification/releases/tag/$answer)
 
 if [ $HTTP_CODE != "404" ]; then
-    curl -L -o cyclonedx_dwnld.tar.gz https://github.com/CycloneDX/specification/archive/refs/tags/$answer.tar.gz -vvv
-    tar -xvf cyclonedx_dwnld.tar.gz 
+    curl -L -o $cd https://github.com/CycloneDX/specification/archive/refs/tags/$answer.tar.gz 
+    tar -xvf $cd
+    rm $cd
 
     py_file=pydantic$answer
     py_file=${py_file//./_} 

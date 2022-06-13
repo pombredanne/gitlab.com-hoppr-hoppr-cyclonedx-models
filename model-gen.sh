@@ -15,7 +15,7 @@ if [ $HTTP_CODE != "404" ]; then
     datamodel-codegen  --input ./specification-$answer/schema/bom-$answer.schema.json --input-file-type jsonschema --output ./$py_file
     sed -i s/unique_items=True/"'REMOVED LM unique_items=True'"/g ./$py_file/__init__.py
 else 
-    echo "The version selected does not exist."
+    echo "The version selected does not exist. Example Usage: ./model-gen.sh 1.4"
 fi
 
 

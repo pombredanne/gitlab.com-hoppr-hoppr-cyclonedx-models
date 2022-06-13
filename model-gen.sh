@@ -9,7 +9,7 @@ if [ $HTTP_CODE != "404" ]; then
     tar -xvf $cd
     rm $cd
 
-    py_file=pydantic$answer
+    py_file=cyclonedx_$answer 
     py_file=${py_file//./_} 
 
     datamodel-codegen  --input ./specification-$answer/schema/bom-$answer.schema.json --input-file-type jsonschema --output ./$py_file

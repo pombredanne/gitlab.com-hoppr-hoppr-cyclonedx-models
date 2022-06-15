@@ -17,3 +17,5 @@ For further reference see the [documentation](https://koxudaxi.github.io/datamod
 Where x and y refer to the applicable major and minor revisons respectively.
 
 * Example Usage: `./model-gen.sh 1.4`
+
+To see an all current releases visit [CycloneDX Specification Releases](https://github.com/CycloneDX/specification/releases)

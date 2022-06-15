@@ -1,8 +1,7 @@
 # hoppr-cyclonedx-models
 
 ## Purpose
-This script serves to pull current and past versions from the [CycloneDX SBOM Standard](https://github.com/CycloneDX) that operates under the SBOM guidelines.  It then utilizes a [datamodel code generator](https://github.com/CycloneDX) that creates pydantic models from the file received. This encourages efficient adherence to the standards set forth by SBOM adoption.
-
+The `model-gen.sh` script pulls a user-specified release from the [CycloneDX SBOM Specification](https://github.com/CycloneDX) that operates under the SBOM guidelines.  It then utilizes the [datamodel code generator](https://koxudaxi.github.io/datamodel-code-generator/) to generate Pydantic models from the input SBOM schema file.  These Pydantic models are available as a public package in PyPI under `hoppr-cyclonedx-models`.
 ## Usage 
 ### Install `datamodel-code-generator`:
 -----------------------------------------
@@ -18,4 +17,4 @@ Where x and y refer to the applicable major and minor revisons respectively.
 
 * Example Usage: `./model-gen.sh 1.4`
 
-To see an all current releases visit [CycloneDX Specification Releases](https://github.com/CycloneDX/specification/releases)
+To see all current releases visit [CycloneDX Specification Releases](https://github.com/CycloneDX/specification/releases)

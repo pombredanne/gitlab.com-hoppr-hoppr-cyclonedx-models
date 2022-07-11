@@ -59,7 +59,7 @@ semantic-release:dry-run:
     reports:
       dotenv: release.env
     paths:
-      - hoppr/hoppr-cyclonedx-models # changed hoppr/__init__.py 1 of 2
+      - ./hoppr-cyclonedx-models/__init__.py  
       - pyproject.toml
       - docs
       - release.env
@@ -86,7 +86,7 @@ semantic-release:
       when: never
   artifacts:
     paths:
-      - hoppr/hoppr-cyclonedx-models
+      - ./hoppr-cyclonedx-models/__init__.py 
       - pyproject.toml
       - docs
 

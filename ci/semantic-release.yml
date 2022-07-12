@@ -25,7 +25,7 @@ variables:
       echo "https://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
       echo "https://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
       apk --no-cache add curl yq jq && \
-- yarn install
+    - yarn install
 
     - yq -o=json eval .releaserc* > release.json
     - jq --arg BRANCHNAME "$CI_COMMIT_REF_NAME" '.branches |= . + [$BRANCHNAME]' release.json > temp.json
@@ -47,7 +47,7 @@ semantic-release:dry-run:
   variables:
     ADDITIONAL_NPM_PKGS: ""
   script:
-    - !reference ['.semantic-base', 'script']
+    #- !reference ['.semantic-base', 'script']
     - semantic-release --ci false --dryRun
     - cat release.env || echo "No release was created, check your commit message."
   rules:
@@ -77,7 +77,7 @@ semantic-release:
     name: $SEMANTIC_RELEASE_IMAGE:$SEMANTIC_RELEASE_TAG
     entrypoint: [""]
   script:
-    - !reference ['.semantic-base', 'script']
+    #- !reference ['.semantic-base', 'script']
     - semantic-release
   rules:
     - if: '$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH && $ENABLE_SEMANTIC_RELEASE == "true" && $CI_PROJECT_NAMESPACE =~ /^lmco/'

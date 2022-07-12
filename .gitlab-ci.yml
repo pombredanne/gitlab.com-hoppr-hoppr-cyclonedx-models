@@ -1,4 +1,5 @@
 ---
+
 workflow:
   rules:
     - if: $CI_MERGE_REQUEST_ID
@@ -58,8 +59,8 @@ check-lint:
   stage: test
   needs: []
   script:
-    - poetry run pylint ./hoppr-cyclonedx-models
-    
+    - poetry run pylint ./hoppr_cyclonedx_models
+
 ###########
 # build
 ###########
@@ -69,13 +70,13 @@ build-dist:
   stage: build
   needs: ["semantic-release:dry-run"]
   script:
-    - sed -i -e "s/^__version__ = \".*\"/__version__ = \"$RELEASE_VERSION\"/" ./hoppr-cyclonedx-models/__init__.py 
+    - sed -i -e "s/^__version__ = \".*\"/__version__ = \"$RELEASE_VERSION\"/" ./hoppr_cyclonedx_models/__init__.py 
     - poetry version $RELEASE_VERSION
     - poetry build
   artifacts:
     paths:
       - dist/
-      - ./hoppr-cyclonedx-models/__init__.py 
+      - ./hoppr_cyclonedx_models/__init__.py 
       - pyproject.toml
 
 generate-mod:
@@ -140,7 +141,7 @@ publish-whl:
   artifacts:
     paths:
       - dist/
-      - ./hoppr-cyclonedx-models/__init__.py 
+      - ./hoppr_cyclonedx_models/__init__.py 
       - pyproject.toml
   rules:
     - if: '$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH && $ENABLE_SEMANTIC_RELEASE == "true" && $CI_PROJECT_NAMESPACE =~ /^lmco/'

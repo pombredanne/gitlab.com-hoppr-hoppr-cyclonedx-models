@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "hoppr-cyclonedx-models"
+name = "hoppr_cyclonedx_models"
 version = "0.1.0"
 description = ""
 authors = ["Katy Dickenson <katherine.dickenson@lmco.com>"]

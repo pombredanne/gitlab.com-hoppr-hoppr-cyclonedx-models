@@ -1,4 +1,4 @@
-from hoppr-cyclonedx-models import __version__
+from hoppr_cyclonedx_models import __version__
 
 
 def test_version():

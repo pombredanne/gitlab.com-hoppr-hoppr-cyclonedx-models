@@ -27,11 +27,11 @@ plugins:
   - changelogFile: docs/CHANGELOG.md
 - - "@google/semantic-release-replace-plugin"
   - replacements:
-    - files: ["./hoppr-cyclonedx-models/__init__.py "]
+    - files: ["./hoppr_cyclonedx_models/__init__.py "]
       from: "^__version__ = \".*\""
       to: "__version__ = \"${nextRelease.version}\""
       results:
-        - file: "./hoppr-cyclonedx-models/__init__.py "
+        - file: "./hoppr_cyclonedx_models/__init__.py "
           hasChanged: true
           numMatches: 1
           numReplacements: 1
@@ -48,7 +48,7 @@ plugins:
 - - "@semantic-release/git"
   - assets:
     - docs/CHANGELOG.md
-    - hoppr-cyclonedx-models/__init__.py 
+    - hoppr_cyclonedx_models/__init__.py 
     - pyproject.toml
     - yarn.lock
 - - "@semantic-release/gitlab"

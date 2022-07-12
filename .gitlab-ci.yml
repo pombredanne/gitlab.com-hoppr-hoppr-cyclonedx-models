@@ -59,6 +59,7 @@ check-lint:
   needs: []
   script:
     - poetry run pylint ./hoppr-cyclonedx-models
+    
 ###########
 # build
 ###########

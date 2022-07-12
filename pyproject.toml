@@ -8,6 +8,7 @@ authors = ["Katy Dickenson <katherine.dickenson@lmco.com>"]
 python = "^3.10"
 datamodel-code-generator = "^0.13.0"
 pydantic = "^1.9.1"
+pylint = "^2.14.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

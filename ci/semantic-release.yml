@@ -21,19 +21,20 @@ variables:
       echo "GIT_COMMITTER_EMAIL: $GIT_COMMITTER_EMAIL"
 
     - |
-      apk update && \
-      echo "https://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
-      echo "https://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
-      apk --no-cache add curl yq jq && \
+      # apk update && \
+      echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories && \
+      echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+      apk update --no-cache --allow-untrusted && \
+      apk --no-cache --allow-untrusted add curl yq jq && \
     - yarn install
 
-    - yq -o=json eval .releaserc* > release.json
-    - jq --arg BRANCHNAME "$CI_COMMIT_REF_NAME" '.branches |= . + [$BRANCHNAME]' release.json > temp.json
-    - cp -rf temp.json release.json
-    - |
-      var=$(find . -maxdepth 1 -type f -name ".releaserc*")
-      jq --slurpfile temp temp.json '.plugins |= . + $temp' release.json | yq eval -P - > $var
-
+    - yq --version
+    - yq e .releaserc.yml -o json > release.json
+    - jq --arg BRANCHNAME "$CI_COMMIT_REF_NAME" '.branches += [$BRANCHNAME]' release.json > temp.json
+    - cp -f temp.json release.json
+    - export var=$(find . -maxdepth 1 -type f -name ".releaserc.yml")
+      echo $var
+    - jq --slurpfile temp temp.json '.plugins += $temp' release.json | yq eval -P - > $var
 
 semantic-release:dry-run:
   cache:

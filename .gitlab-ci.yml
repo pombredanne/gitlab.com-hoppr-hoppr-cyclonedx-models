@@ -68,7 +68,11 @@ check-lint:
 build-dist:
   extends: .base-python
   stage: build
-  needs: ["semantic-release:dry-run"]
+  needs: 
+    - job: semantic-release:dry-run
+      artifacts: true
+    - job: generate-mod
+      artifacts: true
   script:
     - sed -i -e "s/^__version__ = \".*\"/__version__ = \"$RELEASE_VERSION\"/" ./hoppr_cyclonedx_models/__init__.py 
     - poetry version $RELEASE_VERSION

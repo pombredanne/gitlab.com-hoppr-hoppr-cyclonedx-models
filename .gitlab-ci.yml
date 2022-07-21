@@ -20,8 +20,6 @@ include:
   - template: Dependency-Scanning.gitlab-ci.yml
   - template: Security/License-Scanning.gitlab-ci.yml
   - template: Security/Secret-Detection.gitlab-ci.yml
-  # - template: Security/Container-Scanning.gitlab-ci.yml
-
   - local: 'ci/semantic-release.yml'
 
 # Global SAST Variables
@@ -38,8 +36,8 @@ variables:
   ENABLE_SEMANTIC_RELEASE_DRY_RUN: "true"
 
 stages:
-- test
 - build
+- test
 - deploy
 - publish
 
@@ -48,18 +46,6 @@ stages:
   before_script:
     - pip install poetry
     - poetry install
-
-
-###########
-# test
-###########
-
-check-lint:
-  extends: .base-python
-  stage: test
-  needs: []
-  script:
-    - poetry run pylint ./hoppr_cyclonedx_models
 
 ###########
 # build
@@ -94,40 +80,32 @@ generate-mod:
       - $CI_PROJECT_DIR
 
 ###########
-# docs
+# test
 ###########
-# pages-review:
-#   cache:
-#     paths:
-#     - apt-cache/
-#   image: "ubuntu:jammy-20220428"
-#   stage: docs
-#   needs:
-#     - job: semantic-release:dry-run
-#       artifacts: true
-#   variables:
-#     PUBLIC_URL: "/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/public"
-#   environment:
-#     name: review/$CI_COMMIT_REF_SLUG
-#     url: "https://lmco.gitlab.io/-/hoppr/hoppr/-/jobs/$CI_JOB_ID/artifacts/public/index.html"
-#     auto_stop_in: 1 week
-#   script:
-#     - !reference [".setup_pages", "script"]
-#     - !reference [".base-python", "before_script"]
-#     - /bin/yq eval ".extra.hoppr.version = \"$RELEASE_VERSION\"" -i mkdocs.yml
-#     - yarn install
-#     - yarn run make:hoppr
-#   artifacts:
-#     expose_as: 'Hoppr Docs Preview'
-#     paths:
-#     - public
-#   rules:
-#     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-#       when: never
-#     - if: '$CI_PIPELINE_SOURCE == "schedule"'
-#       when: never
-#     - if: $CI_COMMIT_REF_NAME != "main"
 
+check-lint:
+  extends: .base-python
+  stage: test
+  needs: []
+  script:
+    - poetry run pylint ./hoppr_cyclonedx_models
+
+unit-tests:
+  extends: .base-python
+  stage: test
+  needs: []
+  script:
+    - poetry run coverage run --source=hoppr_cyclonedx_models/ -m pytest --junit-xml=test.xml
+    - poetry run coverage report -m
+    - poetry run coverage xml --fail-under=95
+  coverage: "/TOTAL.+ ([0-9]{1,3}%)/"
+  artifacts:
+    reports:
+      junit:
+        - test.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
 
 ###########
 # deploy
@@ -148,7 +126,8 @@ publish-whl:
       - ./hoppr_cyclonedx_models/__init__.py 
       - pyproject.toml
   rules:
-    - if: '$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH && $ENABLE_SEMANTIC_RELEASE == "true" && $CI_PROJECT_NAMESPACE =~ /^lmco/'
+    #- if: '$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH && $ENABLE_SEMANTIC_RELEASE == "true" && $CI_PROJECT_NAMESPACE =~ /^lmco/'
+    - if: '$CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH && $ENABLE_SEMANTIC_RELEASE == "true" && $CI_PROJECT_NAMESPACE =~ /^lmco/'
       when: on_success
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
       when: never

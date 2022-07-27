@@ -102,7 +102,6 @@ generate-mod:
   stage: build
   needs: ["semantic-release:dry-run"]
   script:
-    - mkdir ./hoppr_cyclonedx_models/test1
     - . model-gen.sh 1.3
     - . model-gen.sh 1.4
   artifacts:
@@ -140,10 +139,9 @@ publish-gen:
   needs: ["build-dist", "generate-mod"] 
   script:
     - git checkout -b model-repo
-    - mkdir ./hoppr_cyclonedx_models/test2
     - git add ./hoppr_cyclonedx_models
     - git commit -m "[skip ci] Adding generated pydantic models " 
-    - git push 
+    - git push --set-upstream origin model-repo
   rules:
     - if: '$CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH && $ENABLE_SEMANTIC_RELEASE == "true" && $CI_PROJECT_NAMESPACE =~ /^lmco/'
       when: on_success

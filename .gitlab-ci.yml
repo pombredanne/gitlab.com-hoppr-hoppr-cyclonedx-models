@@ -141,7 +141,7 @@ publish-gen:
   script:
     - mkdir ./hoppr_cyclonedx_models/test2
     - git add ./hoppr_cyclonedx_models
-    - git commit -m "Adding generated pydantic models" [skip ci]
+    - git commit -m "[skip ci] Adding generated pydantic models " 
     - git push 
   rules:
     - if: '$CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH && $ENABLE_SEMANTIC_RELEASE == "true" && $CI_PROJECT_NAMESPACE =~ /^lmco/'

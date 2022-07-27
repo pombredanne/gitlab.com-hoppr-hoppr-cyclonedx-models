@@ -139,6 +139,7 @@ publish-gen:
   extends: .base-python 
   needs: ["build-dist", "generate-mod"] 
   script:
+    - git checkout -b model-repo
     - mkdir ./hoppr_cyclonedx_models/test2
     - git add ./hoppr_cyclonedx_models
     - git commit -m "[skip ci] Adding generated pydantic models " 

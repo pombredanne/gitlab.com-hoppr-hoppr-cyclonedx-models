@@ -48,13 +48,17 @@ plugins:
 - - "@semantic-release/git"
   - assets:
     - docs/CHANGELOG.md
-    - hoppr_cyclonedx_models/__init__.py 
+    - hoppr_cyclonedx_models/
     - pyproject.toml
     - yarn.lock
 - - "@semantic-release/gitlab"
   - gitlabUrl: https://gitlab.com
     gitlabApiPathPrefix: "/api/v4"
     assets:
+    - path: dist/hoppr_cyclonedx_models-*-py3-none-any.whl
+      label: "CycloneDX Models Wheel"
+    - path: dist/hoppr-cyclonedx-models-*.tar.gz
+      label: "CycloneDX Models Installable Tar"
     - path: LICENSE
       label: LICENSE
 

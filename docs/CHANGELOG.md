@@ -1,3 +1,15 @@
+## [0.1.2](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.1.1...v0.1.2) (2022-08-01)
+
+
+### Bug Fixes
+
+* change model-gen to a test, removed pylint test ([9df19c5](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/9df19c5c1bd684e8d52127209b5a7956aad56b82))
+* change pylint test and sed replacement in gitlab-ci ([4e7530c](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/4e7530ca5f51036ffb33982299b8c85e8cb40d3b))
+* change pylint test and sed replacement in gitlab-ci ([606ad00](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/606ad00486dd990ca24369621a21b3159161b61d))
+* changed the sed function to correct error in models ([40c377b](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/40c377bb0eed3f3155217b29770897330b02ab31))
+* commenting error with sed that led to parantheses being removed ([d90ced8](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/d90ced8396a7c6447eb7699caa743e95491aecae))
+* commenting error with sed that led to parantheses being removed ([9df2893](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/9df2893da98cac53d68543a4c7410376151aa211))
+
 ## [0.1.1](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.1.0...v0.1.1) (2022-07-27)
 
 

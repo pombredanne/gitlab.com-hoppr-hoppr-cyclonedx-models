@@ -51,12 +51,12 @@ stages:
 # test
 ###########
 
-check-lint:
-  extends: .base-python
-  stage: test
-  needs: []
-  script:
-    - poetry run pylint ./hoppr_cyclonedx_models
+# check-lint:
+#   extends: .base-python
+#   stage: test
+#   needs: []
+#   script:
+#     - poetry run pylint ./hoppr_cyclonedx_models
 
 unit-tests:
   extends: .base-python

@@ -56,7 +56,7 @@ check-lint:
   stage: test
   needs: []
   script:
-    - poetry run pylint ./hoppr_cyclonedx_models --ignore=./hoppr_cyclonedx_models/cyclonedx_*
+    - poetry run pylint ./hoppr_cyclonedx_models --ignore=cyclonedx_1_3,cyclonedx_1_4
 
 unit-tests:
   extends: .base-python

@@ -133,19 +133,5 @@ publish-whl:
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
       when: never
 
-# publish-gen:
-#   stage: publish
-#   extends: .base-python 
-#   needs: ["build-dist", "generate-mod"] 
-#   script:
-#     - git checkout -b model-repo
-#     - git add ./hoppr_cyclonedx_models
-#     - git commit -m "[skip ci] Adding generated pydantic models " 
-#     - git push --set-upstream origin model-repo
-#   rules:
-#     - if: '$CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH && $ENABLE_SEMANTIC_RELEASE == "true" && $CI_PROJECT_NAMESPACE =~ /^lmco/'
-#       when: on_success
-#     - if: '$CI_PIPELINE_SOURCE == "schedule"'
-#       when: never
 
 

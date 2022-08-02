@@ -1,3 +1,12 @@
+## [0.2.1](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.0...v0.2.1) (2022-08-02)
+
+
+### Bug Fixes
+
+* adjust py.typed file location ([f76ba64](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/f76ba64ddef1528ac8eae59bb20c703e5e3ecaad))
+* adjust py.typed file location ([640032b](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/640032bd228d4192e475aa107f633e360e64487b))
+* adjust py.typed file location ([afec870](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/afec870c0b1723ced438351307c7b4cdd0b8e5de))
+
 ## [0.2.0](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.1.4...v0.2.0) (2022-08-02)
 
 

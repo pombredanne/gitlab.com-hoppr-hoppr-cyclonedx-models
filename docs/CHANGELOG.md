@@ -1,3 +1,10 @@
+## [0.1.3](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.1.2...v0.1.3) (2022-08-02)
+
+
+### Bug Fixes
+
+* Add LICENSE ([0a18a9d](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/0a18a9d283ba1490cd2acd20f0110d5c4645bdef))
+
 ## [0.1.2](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.1.1...v0.1.2) (2022-08-01)
 
 

@@ -1,3 +1,10 @@
+## [0.1.4](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.1.3...v0.1.4) (2022-08-02)
+
+
+### Bug Fixes
+
+* removing committed binaries. Not going to rewrite history. ([8d563a3](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/8d563a3d4c8c48b4f856b40789db53b7b2d75f08))
+
 ## [0.1.3](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.1.2...v0.1.3) (2022-08-02)
 
 

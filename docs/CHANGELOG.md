@@ -1,3 +1,11 @@
+## [0.2.0](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.1.4...v0.2.0) (2022-08-02)
+
+
+### Features
+
+* add py.typed file ([6387a89](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/6387a89cabd1e6a08f21cf038edeef1db01297d4))
+* add py.typed file ([9f85de8](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/9f85de8a27d88c788bf67b7ae5c2c5e7c5c26ae4))
+
 ## [0.1.4](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.1.3...v0.1.4) (2022-08-02)
 
 

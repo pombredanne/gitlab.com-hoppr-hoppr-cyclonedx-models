@@ -6,10 +6,6 @@ authors = ["LMCO Open Source <open.source@lmco.com>"]
 license = "MIT"
 readme = "README.md"
 repository = "https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models"
-packages = [
-  {include = "pixelmatch"},
-  {include = "pixelmatch/py.typed"},
-]
 
 keywords = [
     "pydantic models",

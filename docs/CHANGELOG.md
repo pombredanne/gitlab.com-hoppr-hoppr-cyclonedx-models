@@ -1,3 +1,10 @@
+## [0.2.2](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.1...v0.2.2) (2022-08-10)
+
+
+### Bug Fixes
+
+* Allow extra values in model ([f32aa18](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/f32aa183fb7d34d5253f2f65743c8f021b9a5011))
+
 ## [0.2.1](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.0...v0.2.1) (2022-08-02)
 
 

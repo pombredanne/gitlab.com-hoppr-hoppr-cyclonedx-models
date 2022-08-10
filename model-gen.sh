@@ -16,6 +16,7 @@ if [ $HTTP_CODE != "404" ]; then
     sed -i s/unique_items=True\)/") unique_items=True"/g ./hoppr_cyclonedx_models/$py_file/__init__.py
     sed -i s/unique_items=True\,/"unique_items=True"/g ./hoppr_cyclonedx_models/$py_file/__init__.py
     sed -i s/unique_items=True/""/g ./hoppr_cyclonedx_models/$py_file/__init__.py
+    sed -i s/Extra.forbid/Extra.allow/g ./hoppr_cyclonedx_models/$py_file/__init__.py
 else 
     echo "The version selected does not exist. Example Usage: ./model-gen.sh 1.4"
 fi

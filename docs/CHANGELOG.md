@@ -1,3 +1,10 @@
+## [0.2.3](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.2...v0.2.3) (2022-08-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency semantic-release-helm to v2.2.0 ([0fadcef](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/0fadcefe64087814adc50515dca6143c621233f9))
+
 ## [0.2.2](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.1...v0.2.2) (2022-08-10)
 
 

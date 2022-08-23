@@ -23,7 +23,7 @@
     "conventional-changelog-conventionalcommits": "5.0.0",
     "json-schema": "0.4.0",
     "maven-semantic-release": "1.0.7",
-    "semantic-release": "19.0.4",
+    "semantic-release": "19.0.5",
     "semantic-release-docker": "2.2.0",
     "semantic-release-helm": "2.2.0",
     "semantic-release-license": "1.0.3",

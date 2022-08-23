@@ -1,3 +1,10 @@
+## [0.2.5](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.4...v0.2.5) (2022-08-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency semantic-release to v19.0.5 ([64dfcee](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/64dfceef11e5902d7d955f06cfe569f5eafef1cd))
+
 ## [0.2.4](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.3...v0.2.4) (2022-08-22)
 
 

@@ -1,3 +1,10 @@
+## [0.2.7](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.6...v0.2.7) (2022-08-29)
+
+
+### Bug Fixes
+
+* Fix dev vs prod dependencies ([ff66eb1](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/ff66eb14f847abc5c7b41052d881523eba0c5589))
+
 ## [0.2.6](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.5...v0.2.6) (2022-08-29)
 
 

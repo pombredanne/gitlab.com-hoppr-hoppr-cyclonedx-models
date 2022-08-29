@@ -23,7 +23,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-datamodel-code-generator = "^0.13.0"
+datamodel-code-generator = "^0.13.1"
 pydantic = "^1.9.1"
 pylint = "^2.14.4"
 semantic-release = "^0.1.0"

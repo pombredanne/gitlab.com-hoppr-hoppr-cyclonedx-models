@@ -1,3 +1,11 @@
+## [0.2.6](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.5...v0.2.6) (2022-08-29)
+
+
+### Bug Fixes
+
+* Lock git datamodel version ([313f2f8](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/313f2f810e65f1d54ad4daa1d3660a5361747654))
+* Lock git datamodel version ([7af0bc8](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/7af0bc8d3f31a09e983c26518e83f2e4217c3b59))
+
 ## [0.2.5](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.4...v0.2.5) (2022-08-23)
 
 

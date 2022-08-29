@@ -21,7 +21,9 @@
           "matchDatasources": ["docker"],
           "groupName": "image-tag updates"
         }
+    ],
+    "ignoreDeps": [
+	"datamodel-code-generator"
     ]
-  
   }
   

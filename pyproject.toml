@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hoppr-cyclonedx-models"
-version = "0.2.7"
+version = "0.2.8"
 description = "CycloneDX Pydantic models for easy use in your Python project."
 authors = ["LMCO Open Source <open.source@lmco.com>"]
 license = "MIT"

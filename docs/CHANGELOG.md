@@ -1,3 +1,10 @@
+## [0.2.8](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.7...v0.2.8) (2022-09-06)
+
+
+### Bug Fixes
+
+* Correct models readme ([66477f4](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/66477f4b2dca738b43493ddf4e33f9a301c418c9))
+
 ## [0.2.7](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.6...v0.2.7) (2022-08-29)
 
 

@@ -1,20 +1,29 @@
 # hoppr_cyclonedx_models
 
-## Purpose
-The `model-gen.sh` script pulls a user-specified release from the [CycloneDX SBOM Specification](https://github.com/CycloneDX) that operates under the SBOM guidelines.  It then utilizes the [datamodel code generator](https://koxudaxi.github.io/datamodel-code-generator/) to generate Pydantic models from the input SBOM schema file.  These Pydantic models are available as a public package in PyPI under `hoppr_cyclonedx_models`.
-## Usage 
-### Install `datamodel-code-generator`:
------------------------------------------
-`pip install datamodel-code-generator`
+[![pypi](https://img.shields.io/pypi/v/hoppr-cyclonedx-models)](https://pypi.org/project/hoppr-cyclonedx-models)
+[![downloads](https://pepy.tech/badge/hoppr-cyclonedx-models/month)](https://pepy.tech/project/hoppr-cyclonedx-models)
+[![versions](https://img.shields.io/pypi/pyversions/hoppr-cyclonedx-models.svg)](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models)
+[![license](https://img.shields.io/gitlab/license/lmco/hoppr/hoppr-cyclonedx-models)](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/-/blob/main/LICENSE)
 
-For further reference see the [documentation](https://koxudaxi.github.io/datamodel-code-generator/).
+Serializable CycloneDX Models.   Quickly get up and running with models generated directly off the specification.
 
-### Create your model:
------------------------------------------
-`./model-gen.sh x.y` 
+Current generated models can be found here: [Generated Models](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/-/tree/main/hoppr_cyclonedx_models)
 
-Where x and y refer to the applicable major and minor revisons respectively.
+## Installation
 
-* Example Usage: `./model-gen.sh 1.4`
+Install using `pip install -U hoppr-cyclonedx-models` or `poetry add hoppr-cyclonedx-models`.  
 
-To see all current releases visit [CycloneDX Specification Releases](https://github.com/CycloneDX/specification/releases)
+## A Simple Example:
+
+```py
+from hoppr_cyclonedx_models.cyclonedx_1_4 import Component
+
+data = {'type': 'library', 'purl': 'pkg:pypi/django@1.11.1', 'name': 'django', 'version': '1.11.1'}
+
+component = Component(**data)
+print(component.purl)
+```
+
+## Contributing
+
+For guidance setting up a development environment and how to make a contribution to _hoppr-cyclonedx-models_, see [Contributing to Hoppr](https://hoppr.dev/contributing.html).

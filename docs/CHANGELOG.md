@@ -1,3 +1,10 @@
+## [0.2.9](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.8...v0.2.9) (2022-09-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @semantic-release/gitlab to v9.4.2 ([d9045a0](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/commit/d9045a04d973eec15aaf7f357a872bffda20a346))
+
 ## [0.2.8](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.7...v0.2.8) (2022-09-06)
 
 

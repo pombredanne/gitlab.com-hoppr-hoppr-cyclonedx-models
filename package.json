@@ -17,7 +17,7 @@
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/gitlab": "9.4.2",
+    "@semantic-release/gitlab": "9.5.0",
     "@semantic-release/npm": "9.0.1",
     "ansi-regex": "6.0.1",
     "conventional-changelog-conventionalcommits": "5.0.0",

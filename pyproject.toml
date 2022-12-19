@@ -5,7 +5,7 @@ description = "CycloneDX Pydantic models for easy use in your Python project."
 authors = ["LMCO Open Source <open.source@lmco.com>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models"
+repository = "https://gitlab.com/hoppr/hoppr-cyclonedx-models"
 include = ["hoppr_cyclonedx_models/py.typed"]
 
 keywords = [
@@ -22,8 +22,8 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-pydantic = "^1.9.1"
+python = "^3.7.2"
+pydantic = {extras = ["email"], version = "^1.10.2"}
 
 
 [tool.poetry.dev-dependencies]

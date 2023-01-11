@@ -36,7 +36,6 @@ semantic-release:dry-run:
   variables:
     ADDITIONAL_NPM_PKGS: ""
   script:
-    - !reference ['.semantic-base', 'script']
     - semantic-release --ci false --dryRun
     - cat release.env || echo "No release was created, check your commit message."
   rules:
@@ -66,12 +65,11 @@ semantic-release:
     name: $SEMANTIC_RELEASE_IMAGE:$SEMANTIC_RELEASE_TAG
     entrypoint: [""]
   script:
-    - !reference ['.semantic-base', 'script']
     - semantic-release
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
       when: never
-    - if: $CI_COMMIT_REF_NAME =~ /^main|dev$/
+    - if: $CI_COMMIT_REF_NAME =~ /^main$/
       when: on_success
   artifacts:
     paths:

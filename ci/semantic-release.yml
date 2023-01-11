@@ -30,9 +30,6 @@ variables:
 
 semantic-release:dry-run:
   extends: .semantic-base
-  stage: pre
-  resource_group: release
-  environment: release
   variables:
     ADDITIONAL_NPM_PKGS: ""
   script:

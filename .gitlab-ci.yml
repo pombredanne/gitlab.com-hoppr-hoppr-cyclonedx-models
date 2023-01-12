@@ -29,7 +29,7 @@ variables:
   SAST_BANDIT_EXCLUDED_PATHS: "*/test/**,*/tests/**,*/node_modules/**,*/target/**,*/venv/**"
   SECRET_DETECTION_EXCLUDED_PATHS: "docs"
   PYTHON_IMAGE: "python"
-  PYTHON_TAG: "3.7.2"
+  PYTHON_TAG: "3.10"
 
   ## Semantic Release
   ENABLE_SEMANTIC_RELEASE: "true"
@@ -132,6 +132,3 @@ publish-whl:
       when: on_success
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
       when: never
-
-
-

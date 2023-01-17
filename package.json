@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jerod Heck",
+  "author": "LMCO Open Source <open.source@lmco.com>",
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "@semantic-release-plus/docker": "3.1.2",

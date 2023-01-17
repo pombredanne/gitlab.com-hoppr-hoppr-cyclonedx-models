@@ -19,24 +19,29 @@ plugins:
       noteKeywords:
       - BREAKING CHANGE
       - BREAKING CHANGES
+
 - - "@semantic-release/release-notes-generator"
   - preset: conventionalcommits
+
 - - "@semantic-release/exec"
-  - "generateNotesCmd": "echo RELEASE_VERSION=v${nextRelease.version} > release.env"
+  - generateNotesCmd: "echo RELEASE_VERSION=v${nextRelease.version} > release.env"
+
 - - "@semantic-release/changelog"
   - changelogFile: docs/CHANGELOG.md
+
 - - "@semantic-release/exec"
-    - prepareCmd: |
-        sed --in-place 's/__version__ = ".*"/__version__ = "${nextRelease.version}"/' hoppr_cyclonedx_models/__init__.py
-        poetry lock --no-update
-        poetry version ${nextRelease.version}
+  - prepareCmd: |
+      sed --in-place 's/__version__ = ".*"/__version__ = "${nextRelease.version}"/' hoppr_cyclonedx_models/__init__.py
+      poetry lock --no-update
+      poetry version ${nextRelease.version}
+
 - - "@semantic-release/git"
   - assets:
     - docs/CHANGELOG.md
     - hoppr_cyclonedx_models/
-    - poetry.lock
     - pyproject.toml
     - yarn.lock
+
 - - "@semantic-release/gitlab"
   - gitlabUrl: https://gitlab.com
     gitlabApiPathPrefix: "/api/v4"
@@ -47,4 +52,3 @@ plugins:
       label: "CycloneDX Models Installable Tar"
     - path: LICENSE
       label: LICENSE
-

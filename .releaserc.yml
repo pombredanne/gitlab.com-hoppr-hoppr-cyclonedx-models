@@ -37,7 +37,7 @@ plugins:
           numReplacements: 1
       countMatches: true
     - files: ["pyproject.toml"]
-      from: ".*version="([^"]*)".*"
+      from: ".*version = "([^"]*)".*"
       to: "version = \"${nextRelease.version}\""
       results:
         - file: "pyproject.toml"

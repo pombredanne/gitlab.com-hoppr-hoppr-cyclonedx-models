@@ -9,10 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jerod Heck",
+  "author": "LMCO Open Source <open.source@lmco.com>",
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
-    "@google/semantic-release-replace-plugin": "1.2.0",
     "@semantic-release-plus/docker": "3.1.2",
     "@semantic-release/changelog": "6.0.2",
     "@semantic-release/exec": "6.0.3",

@@ -1,3 +1,34 @@
+## [0.3.0](https://gitlab.com/hoppr/hoppr-cyclonedx-models/compare/v0.2.10...v0.3.0) (2023-01-18)
+
+
+### Features
+
+* Min python to 3.7.2; Add renovate labels ([9164f75](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/9164f75e994bf1255f1f4fc7456106b8f25ae502))
+
+
+### Bug Fixes
+
+* Add missing nghttp2-libs pkg ([8b8c9d6](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/8b8c9d66d22f76c8db256b726dad1c58fe5b1a69))
+* **deps:** update dependency @google/semantic-release-replace-plugin to v1.2.0 ([b0e823f](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/b0e823f071e80d64d48b51c0c4eaedf7ce71020e))
+* **deps:** update dependency @semantic-release/npm to v9.0.2 ([e38b3fb](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/e38b3fbed528ef2bd14c9ae95c5f4cce1c3e6860))
+* **deps:** update dependency semantic-release to v20 ([e7fc9d0](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/e7fc9d0c418e8625bb8414a1e6bddf94bcbd2d5a))
+* **deps:** update dependency semantic-release to v20.0.1 ([e260a6b](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/e260a6bce81191750b98d276ab24c186b4bb4b25))
+* **deps:** update dependency semantic-release to v20.0.2 ([617d473](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/617d473d7606a39fe120770faa46426d58f25538))
+* **deps:** update semantic-release monorepo ([83fd812](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/83fd812fe4411be98b133eb612c1e86b5266e6ed))
+* escape quotes; final regex attempt ([9e5249e](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/9e5249e8f9236350912c206413808f1209037874))
+* first version in pyproject.toml ([7065d69](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/7065d6988d083d40f580fce743f6b6c8d718b647))
+* job name ([7145727](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/7145727504009c2947ddeaa597d20abd67cf1c4e))
+* LM OS author ([0e7356e](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/0e7356e1f73e991d0aac43925d47e7cceca9585b))
+* migrate hoppr ci to cdx models ([78926ce](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/78926ce5ecd6fec6f3d67fd03a3be2d17c75896e))
+* one last try at semrel version regex ([b718563](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/b7185632e20e5c1e714652a736819d769baa9e67))
+* py version; remove job ref ([dd16dec](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/dd16dec7a754c344806c17f83b03332a649955de))
+* py versions ([49d1b87](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/49d1b8756779735ec50c963f608a9abef57f89e3))
+* remove from pkg.json ([630d1b3](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/630d1b37dd5ab9c843280d349f7a1fd814c168f9))
+* remove semantic-base ([332d7a3](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/332d7a317c28b01ca5235645abccc9ba1cb62c4e))
+* remove semrel-release-replace plugin ([8a5d139](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/8a5d1391cef4c424d8994f3ea326551feeb0b664))
+* spaces ([2802803](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/28028035f137d01d80901e00644761951990b7db))
+* YAML alignment ([9b28b94](https://gitlab.com/hoppr/hoppr-cyclonedx-models/commit/9b28b94603f70e72a619339db77b099a38fcf6ec))
+
 ## [0.2.10](https://gitlab.com/lmco/hoppr/hoppr-cyclonedx-models/compare/v0.2.9...v0.2.10) (2022-11-03)
 
 
